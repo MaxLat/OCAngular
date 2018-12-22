@@ -1,7 +1,7 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <app-appareil-view></app-appareil-view>
-    </div>
-  </div>
-</div>
+<ul class="list-group">
+  <app-appareil  *ngFor="let appareil of appareils; let i = index"
+                 [appareilName]="appareil.name"
+                 [appareilStatus]="appareil.status" 
+                 [index]="i"
+                 [id]="appareil.id"></app-appareil>
+</ul>

@@ -11,6 +11,7 @@ export class AppareilComponent  {
  @Input() appareilName :string;
  @Input() appareilStatus: string;
  @Input() index: number;
+ @Input() id: number;
 
 
   constructor(private appareilService : AppareilService) {

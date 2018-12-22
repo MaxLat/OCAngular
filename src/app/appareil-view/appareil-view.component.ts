@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppareilService } from '../services/appareil.service';
+import { AppareilService } from '../services/Appareil.service';
 
 @Component({
   selector: 'app-appareil-view',
