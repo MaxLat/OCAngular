@@ -6,10 +6,12 @@ import { SingleAppareilComponent } from './single-appareil/single-appareil.compo
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { AuthGuard } from './services/Authguard.service'
 import { from } from 'rxjs';
+import { EditAppareilComponent } from './edit-appareil/edit-appareil.component';
 
 const routes: Routes = [
   { path: 'appareils',canActivate : [AuthGuard], component: AppareilViewComponent },
   { path: 'appareils/:id',canActivate : [AuthGuard] , component: SingleAppareilComponent },
+  { path: 'edit', canActivate: [AuthGuard], component: EditAppareilComponent },
   { path: 'auth', component: AuthComponent },
   { path: '', component: AppareilViewComponent },
   { path: 'not-found', component: FourOhFourComponent},
