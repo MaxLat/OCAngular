@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,8 @@ import { AuthGuard } from './services/Authguard.service';
 import { EditAppareilComponent } from './edit-appareil/edit-appareil.component';
 import { UserService } from './services/User.service';
 import { UserListComponent } from './user-list/user-list.component';
+import { NewUserComponent } from './new-user/new-user.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -27,12 +29,16 @@ import { UserListComponent } from './user-list/user-list.component';
     SingleAppareilComponent,
     FourOhFourComponent,
     EditAppareilComponent,
-    UserListComponent
+    UserListComponent,
+    NewUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+    
   ],
   providers: [AppareilService, AuthService ,AuthGuard,UserService],
   bootstrap: [AppComponent]
